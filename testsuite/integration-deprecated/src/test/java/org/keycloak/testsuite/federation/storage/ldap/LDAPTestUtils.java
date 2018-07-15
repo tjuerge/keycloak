@@ -228,7 +228,8 @@ public class LDAPTestUtils {
                     GroupMapperConfig.GROUPS_DN, "ou=Groups," + baseDn,
                     GroupMapperConfig.MAPPED_GROUP_ATTRIBUTES, descriptionAttrName,
                     GroupMapperConfig.PRESERVE_GROUP_INHERITANCE, "true",
-                    GroupMapperConfig.MODE, mode.toString());
+                    GroupMapperConfig.MODE, mode.toString(),
+                    GroupMapperConfig.LDAP_GROUPS_PATH, "/");
             updateGroupMapperConfigOptions(mapperModel, otherConfigOptions);
             realm.addComponentModel(mapperModel);
         }
